@@ -1,2 +1,7 @@
 def sum(a, b):
-	return (a ^ b) ^ ((a & b) << 1)
+	if(b != 0):
+		s = (a ^ b)
+		c = (a & b) << 1
+		return sum(s, c)
+	else:
+		return a
