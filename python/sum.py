@@ -2,7 +2,7 @@ def recursive_sum(a, b):
 	if(b != 0):
 		s = (a ^ b)
 		c = (a & b) << 1
-		return sum(s, c)
+		return recursive_sum(s, c)
 	else:
 		return a
 
